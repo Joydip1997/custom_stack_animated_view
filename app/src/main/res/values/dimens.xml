@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="collapsed_height">200</dimen>
+    <dimen name="expanded_height">400</dimen>
+    <dimen name="card_cornerRadius">10</dimen>
+</resources>
