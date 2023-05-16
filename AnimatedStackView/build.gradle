@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.animatedstackview'
+    namespace 'com.joydip1997.animatedstackview'
     compileSdk 33
 
     defaultConfig {
-        minSdk 21
+        minSdk 24
         targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -47,9 +47,9 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
 
-                groupId = 'com.example.animatedstackview'
-                artifactId = 'animated-stack-view'
-                version = '1.0.1'
+                groupId = 'com.github.Joydip1997'
+                artifactId = 'image-preview-compose'
+                version = '1.0'
             }
         }
     }

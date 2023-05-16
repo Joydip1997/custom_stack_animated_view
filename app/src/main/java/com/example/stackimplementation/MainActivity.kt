@@ -9,12 +9,15 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.joydip1997.animatedstackview.CustomStackFramework
 import com.example.stackimplementation.databinding.ActivityMainBinding
+import com.joydip1997.animatedstackview.CollapsableView
+import com.joydip1997.animatedstackview.CustomStackView
 
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-    private lateinit var customStackFramework: com.example.animatedstackview.CustomStackFramework
+    private lateinit var customStackFramework: CustomStackFramework
     private var ratio : Float = 1.0f
     private var linearLayout: LinearLayout? = null
     private var containerHeight = 500
@@ -33,19 +36,19 @@ class MainActivity : AppCompatActivity() {
 
         containerHeight = (screenHeight/1.5).toInt()
 
-        val firstView = LayoutInflater.from(this).inflate(R.layout.fragment_first, parentLayout, false) as com.example.animatedstackview.CollapsableView
-        val secondView = LayoutInflater.from(this).inflate(R.layout.fragment_second, parentLayout, false) as com.example.animatedstackview.CollapsableView
-        val thirdView = LayoutInflater.from(this).inflate(R.layout.fragment_third, parentLayout, false) as com.example.animatedstackview.CollapsableView
-        val fourthView = LayoutInflater.from(this).inflate(R.layout.fragment_fourth, parentLayout, false) as com.example.animatedstackview.CollapsableView
+        val firstView = LayoutInflater.from(this).inflate(R.layout.fragment_first, parentLayout, false) as CollapsableView
+        val secondView = LayoutInflater.from(this).inflate(R.layout.fragment_second, parentLayout, false) as CollapsableView
+        val thirdView = LayoutInflater.from(this).inflate(R.layout.fragment_third, parentLayout, false) as CollapsableView
+        val fourthView = LayoutInflater.from(this).inflate(R.layout.fragment_fourth, parentLayout, false) as CollapsableView
 
-        val listOfViews  = mutableListOf<Triple<com.example.animatedstackview.CollapsableView,Float,Float>>().apply {
+        val listOfViews  = mutableListOf<Triple<CollapsableView,Float,Float>>().apply {
             add(Triple(firstView,0.9f,0.15f))
             add(Triple(secondView,0.85f,0.12f))
             add(Triple(thirdView,0.80f,0.09f))
             add(Triple(fourthView,0.75f,0.06f))
         }
 
-        customStackFramework = com.example.animatedstackview.CustomStackView(
+        customStackFramework = CustomStackView(
             parentView = parentLayout,
             highestViewHeight = screenHeight,
             listOfViews = listOfViews

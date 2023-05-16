@@ -1,4 +1,4 @@
-package com.example.animatedstackview
+package com.joydip1997.animatedstackview
 
 import android.animation.Animator
 import android.animation.ValueAnimator
