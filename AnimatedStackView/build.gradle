@@ -9,7 +9,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        minSdk 24
+        minSdk 21
         targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -45,7 +45,7 @@ afterEvaluate {
 
                 groupId = 'com.github.Joydip1997'
                 artifactId = 'animated-stack-view'
-                version = '1.0.4'
+                version = '1.1'
             }
         }
     }
